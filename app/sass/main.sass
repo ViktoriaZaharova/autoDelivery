@@ -1,0 +1,1432 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #ffffff
+  opacity: 1
+
+*:-moz-placeholder
+  color: #ffffff
+  opacity: 1
+
+*::-moz-placeholder
+  color: #ffffff
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #ffffff
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #ffffff
+
+body input:required:valid,
+body textarea:required:valid
+  color: #ffffff
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  background-color: #f6f6f7
+  width: 1920px
+  margin: 0 auto
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease-out
+  box-sizing: border-box
+
+  &:hover, &:focus
+    outline: none
+    border: none
+
+
+button, textarea, select, input
+  outline: none
+  transition: .3s ease-out
+  border: none
+    radius: 0
+  cursor: pointer
+  box-sizing: border-box
+
+  &:hover, &:focus
+    outline: none
+
+textarea, select, input
+  width: 100%
+
+label
+  display: block
+  width: 100%
+  height: 100%
+
+.title
+  color: $title
+  margin: 58px 0 84px
+
+  p
+    display: block
+    font-size: 30px
+
+  h2
+    font-size: 72px
+    display: inline-block
+    font-weight: 700
+    text-transform: uppercase
+
+  span
+    display: inline-block
+    font-size: 30px
+    margin: 0 0 0 26px
+
+
+.btn-accent
+  background-image: linear-gradient(to right, #f7ad1b 0%, #ff0018 67%, #ff0018 100%)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+  color: #ffffff
+  box-sizing: border-box
+
+  .text
+    padding: 0 20px 0 13px
+    font-size: 18px
+    font-family: 'CenturyGothic', sans-serif
+
+  .icon
+    min-width: 75px
+    width: 75px
+    height: 71px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $box
+
+  &:hover
+    background: #e50016
+
+    .icon
+      background: #cd0216
+
+.btn-default
+  background-color: #ffffff
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-direction: row
+  color: $box
+  border: 1px solid $accent
+  box-sizing: border-box
+  width: 100%
+  height: 73px
+  text-align: center
+
+  .text
+    padding: 0 20px 0 13px
+    font-size: 18px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: 'CenturyGothic', sans-serif
+    height: 100%
+    width: 100%
+
+  .icon
+    min-width: 73px
+    width: 77px
+    height: 73px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $box
+
+  &:hover
+    background-color: $accent
+    color: #ffffff
+
+.btn-red
+  background-color: #e50016
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: 18px
+  height: 73px
+  font-family: 'CenturyGothic', sans-serif
+  &:hover
+    background: #fff
+    color: #e50016
+
+
+
+.container
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  width: 1170px
+  padding: 0 15px
+  box-sizing: border-box
+
+.phone
+  color: #ffffff
+  font-size: 20px
+  text-transform: uppercase
+  letter-spacing: 0.5px
+  font-family: 'CenturyGothic-Bold', sans-serif
+
+//top menu
+.top-menu
+  width: 100%
+  background-color: #2c2c2c
+  padding: 10px 0
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 2
+
+.main-menu
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  li
+    margin: 0 73px 0 0
+    &:last-child
+      margin: 0
+    a
+      font-size: 14px
+      color: #ffffff
+      font-family: 'Play', sans-serif
+      letter-spacing: 0.7px
+      &:hover
+        color: #f8961b
+
+
+header
+  position: absolute
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 2
+  width: 100%
+  top: 65px
+
+  .container
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    width: 1150px
+
+.contacts
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  max-width: 460px
+  width: 100%
+  .phone
+    margin: 10px 12px 0 0
+  .btn-accent
+    margin: 0 0 8px
+
+    .text
+      font-size: 14px
+
+    .icon
+      height: 40px
+      width: 41px
+      min-width: 41px
+
+.company-description
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  color: #ffffff
+  margin: 0 auto 0 46px
+  .icon
+    margin: 0 auto 13px
+
+  p
+    text-align: center
+    font-size: 14px
+    letter-spacing: 0.7px
+    transition: .3s ease
+  &:hover
+    color: $accent
+
+.info
+  font-size: 12px
+  font-family: 'CenturyGothic', sans-serif
+  color: #ffffff
+
+.logo
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #ffffff
+  span
+    transition: .3s ease
+  &:hover
+    span
+      color: $accent
+
+  span
+    text-transform: uppercase
+    font-size: 14px
+    font-family: 'CenturyGothic-Bold', sans-serif
+    letter-spacing: 2.8px
+    color: #ffffff
+    margin: 10px auto 0
+
+
+.slider-title
+  text-align: center
+  color: #ffffff
+  font-size: 60px
+  font-weight: 700
+  margin: 155px auto 108px
+  text-transform: uppercase
+
+.main__slider-box
+  position: relative
+  max-height: 1150px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    top: 0
+    background: rgba(#000, .6)
+      size: cover
+    width: 100%
+    height: 100%
+
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+    background: url("../img/figure.png") no-repeat center
+      size: contain
+    width: 100%
+    height: 50px
+    z-index: 1
+
+  .container
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: absolute
+    left: 0
+    right: 0
+    top: 112px
+    margin: 0 auto
+
+    h3
+      text-transform: uppercase
+      color: #ffffff
+      font-size: 48px
+
+    .btn-accent
+      margin: 80px auto 0
+
+      .text
+        text-align: center
+        padding: 0 88px
+
+  img
+    margin: 0 auto
+  p
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    font-size: 26px
+    font-family: 'Play', sans-serif
+
+
+.main__slider
+  position: relative
+
+  .slick-dots
+    bottom: 67px
+
+.slick-dotted.slick-slider
+  margin: 0
+
+.slick-prev
+  left: 0
+
+.slick-next
+  right: 0
+
+  &:before
+    transform: rotate(180deg)
+
+.slick-arrow
+  opacity: 1
+  z-index: 1
+  width: 112px
+  height: 112px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(#000, .41)
+
+  &:before
+    content: ''
+    width: 18px
+    height: 30px
+    background: url("../img/arrow-left.png") no-repeat center
+      size: contain
+
+  &:hover, &:focus
+    background: rgba(#000, .8)
+
+.slick-dots
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+  li.slick-active
+    button
+      &:before
+        background-color: $accent
+        border-color: $accent
+
+  li
+    width: 10px
+    height: 10px
+    opacity: 1
+    margin: 0 4.5px
+
+    button
+      width: 10px
+      height: 10px
+      opacity: 1
+      padding: 0
+
+      &:before
+        box-sizing: border-box
+        border: 1px solid #ffffff
+          radius: 50%
+        width: 10px
+        height: 10px
+        opacity: 1
+        content: ''
+
+.advantages
+  position: relative
+  margin: 0 0 30px 0
+
+  .container
+    flex-direction: column
+    z-index: 2
+    position: relative
+
+  .title
+    margin: 55px 0 38px
+    span
+      font-size: 36px
+      text-transform: uppercase
+
+.advantages__content
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+
+.advantages-box
+  position: relative
+  color: $title
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 246px
+  margin: 0 0 40px
+  box-sizing: border-box
+
+  .icon
+    width: 96px
+    height: 96px
+    border: 10px solid #ff0018
+    padding: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s ease
+
+  h5
+    margin: 23px 0 26px
+    text-transform: uppercase
+    font-size: 17px
+    font-family: 'CenturyGothic-Bold', sans-serif
+    transition: .3s ease
+
+  p
+    font-size: 14px
+    font-family: 'CenturyGothic', sans-serif
+    transition: .3s ease
+
+  &:hover
+    .icon
+      border-color: #f7ad1b
+
+
+//checkbox
+//.checkbox
+//  width: 100%
+//  display: flex
+//  flex-direction: row
+//  align-items: center
+//  justify-content: flex-start
+//
+//  .checkbox-inp
+//    display: none
+//
+//  .checkbox-custom
+//    position: relative
+//    width: 15px
+//    height: 15px
+//    min-width: 15px
+//    display: inline-block
+//    vertical-align: middle
+//    border: none
+//    background: #ffffff
+//    cursor: pointer
+//    transition: .3s ease
+//    &::before
+//      content: ""
+//      display: block
+//      position: absolute
+//      top: 2px
+//      right: 0
+//      bottom: 0
+//      left: 0
+//      margin: 0 auto
+//      width: 9px
+//      height: 9px
+//      background: url("../img/check.png") no-repeat center
+//        size: contain
+//  .label
+//    display: inline-block
+//    vertical-align: middle
+//    margin: 0 0 0 10px
+//    color: #fff
+//    cursor: pointer
+//    font:
+//      size: 12px
+//      family: 'CenturyGothic', sans-serif
+//
+//    a
+//      display: inline-block
+//      text-decoration: underline
+//      color: #fff
+//
+//  .checkbox-inp:checked + .checkbox-custom
+//    &::before
+//      content: ""
+//      display: block
+//      position: absolute
+//      top: 2px
+//      right: 0
+//      bottom: 0
+//      left: 0
+//      margin: 0 auto
+//      width: 9px
+//      height: 9px
+//      background: #fff
+
+//section section-cost
+.section-cost
+  position: relative
+  background: url("../img/bg2.jpg") no-repeat center
+    size: cover
+  z-index: 2
+  padding: 0 0 150px 0
+
+  &:before, &:after
+    content: ''
+    position: absolute
+
+  &:before
+    right: 0
+    top: 0
+    background: url("../img/figure1.png") no-repeat right top
+      size: contain
+    width: 100%
+    height: 55px
+
+  &:after
+    left: 0
+    bottom: -15px
+    background: url("../img/figure2.png") no-repeat center
+      size: contain
+    width: 100%
+    height: 92px
+    z-index: 2
+
+  .container
+    flex-direction: column
+    color: #ffffff
+    z-index: 4
+
+    .title
+      color: #ffffff
+      margin: 92px 0 57px
+      text-align: center
+
+.section-cost__image
+  position: absolute
+  right: 0
+  bottom: -41%
+  z-index: 3
+  width: 676px
+  height: 536px
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+//form
+.form
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+
+  label
+    width: 340px
+    margin: 0 0 32px
+
+  button
+    height: 71px
+    padding: 0
+    width: 340px
+
+    .icon
+      width: 75px
+      height: 71px
+
+    .text
+      padding: 0 15px 0 35px
+      font-size: 18px
+  label.checkbox-wrapper
+    margin: 0 0 0 auto
+    input
+      width: auto
+      height: auto
+      margin: 0 10px 0 0
+    .label
+      color: #ffffff
+      font-size: 12px
+      font-family: 'CenturyGothic', sans-serif
+      a
+        display: inline
+        text-decoration: underline
+        color: #ffffff
+
+input, select
+  border: 1px solid $border
+  height: 71px
+  color: #ffffff
+  font-family: 'CenturyGothic', sans-serif
+  font-size: 18px
+  padding: 0 26px
+  background: transparent
+
+  &::placeholder
+    color: #ffffff
+
+.checkbox-wrapper
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+
+  .checkbox
+    margin: 0
+
+//company-features
+.company-features
+  padding: 230px 0 43px
+  .container
+    justify-content: space-between
+    align-items: flex-start
+
+.company-features__box
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 555px
+  height: 305px
+  margin: 0 0 40px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .5
+  .image-bg
+    width: 100%
+    height: 100%
+    overflow: hidden
+  .icon
+    position: absolute
+    left: 46px
+    top: -16px
+    width: 100px
+    height: 136px
+    background-color: #ff0018
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 2
+  .text
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    padding: 142px 54px 10px 47px
+    z-index: 2
+    color: #fff
+    font-size: 16px
+
+
+
+//section car-park
+.car-park
+  position: relative
+  display: flex
+  flex-direction: column
+
+  .container
+    flex-direction: column
+
+    .title
+      margin: 0 0 11px
+  .btn-price
+    margin: 0 auto 29px
+    width: 323px
+    height: 73px
+    background: transparent
+    font-size: 18px
+    color: #ff0018
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      background-image: linear-gradient(to right, #f7ad1b 0%, #ff0018 67%, #ff0018 100%)
+      border-color: transparent
+      color: #fff
+
+
+
+.car-park__description
+  display: flex
+  flex-direction: column
+  padding: 0 0 0 192px
+  box-sizing: border-box
+
+  p
+    color: $title
+    font-size: 30px
+    margin: 0 0 42px 0
+
+  span
+    font-size: 18px
+    color: $title
+
+.subtitle
+  color: #ffffff
+  z-index: 2
+  font-size: 48px
+  position: relative
+  box-sizing: border-box
+  line-height: 40px
+  margin: 0 0 14px
+  padding: 0 0 0 197px
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+  h3
+    padding: 0 0 0 15px
+    font-size: 30px
+
+  &:before
+    content: ''
+    position: absolute
+    right: auto
+    top: 0
+    background: url("../img/figure5.png")
+    height: 40px
+    width: 1440px
+    z-index: -1
+
+.car-park__content
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
+  margin: 57px 0 0 0
+
+
+.car-park__box
+  width: 264px
+  display: flex
+  flex-direction: column
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2)
+  background: #ffffff
+  margin: 0 0 79px
+
+  .image
+    height: 207px
+    border: 1px solid #e9e9e9
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    box-sizing: border-box
+    padding: 5px
+  .btn-default
+    &:hover
+      .text
+       background-image: linear-gradient(to right, #f7ad1b 0%, #ff0018 67%, #ff0018 100%)
+
+.car-park__title
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 17px
+  color: #000
+  text-transform: uppercase
+  padding: 24px 10px
+  font-family: 'CenturyGothic-Bold', sans-serif
+
+
+
+//section about
+.about
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: wrap
+  align-items: flex-start
+  padding: 112px 0
+  position: relative
+  background: url("../img/bg3.png") #000 no-repeat center
+    size: cover
+  color: #fff
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: -18px
+    background: url("../img/figure3.png") no-repeat center
+      size: contain
+    width: 100%
+    height: 76px
+  &:after
+    content: ''
+    position: absolute
+    left: -20px
+    bottom: -42px
+    background: url("../img/figure4.png") no-repeat center
+      size: contain
+    width: 615px
+    height: 60px
+
+
+.about__image
+  width: 100%
+  max-width: 750px
+  height: 417px
+  position: absolute
+  left: -14px
+  bottom: -105%
+  z-index: 2
+  img
+    height: 100%
+    width: 100%
+    max-width: none
+
+
+.about__text
+  display: flex
+  flex-direction: column
+  padding: 0
+  box-sizing: border-box
+  margin: 0 0 0 auto
+  width: calc(100% - 615px)
+  .title
+    position: relative
+    margin: 0 0 53px
+    color: #fff
+
+
+.about__text-description
+  position: relative
+  max-width: 530px
+  font-size: 16px
+  line-height: 24px
+  p
+    &:last-child
+      margin: 0
+
+
+.section-cost.section-cost-two
+  background: url("../img/bg5.jpg") no-repeat center bottom
+    size: cover
+  padding: 0 0 67px
+  &:after
+    background: #000
+    opacity: .45
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 1
+  &:before
+    top: -4px
+    left: 0
+    background: url("../img/figure6.png") no-repeat center
+      size: cover
+    width: 100%
+    height: 50px
+    z-index: 2
+
+  .container
+    .title
+      margin: 153px 0 47px
+      span
+        font-size: 30px
+        margin: 0
+
+
+footer
+  display: flex
+  flex-direction: column
+  margin: 7px 0 0 0
+
+
+.footer__top
+  background: url("../img/footer-bg.png") no-repeat center
+    size: cover
+  padding: 45px 0 50px
+
+  .container
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: flex-start
+    .logo
+      max-width: 277px
+
+      .description
+        color: #ffffff
+        font-size: 12px
+        line-height: 14px
+        font-family: 'CenturyGothic', sans-serif
+        margin: 16px auto 0
+        letter-spacing: 0.7px
+        text-transform: none
+        text-align: left
+
+      span
+        margin: 0
+        text-align: center
+
+    .box-contacts
+      display: flex
+      flex-direction: column
+      color: #ffffff
+      font-size: 18px
+      font-family: 'CenturyGothic', sans-serif
+
+      a
+        color: #ffffff
+        font-size: 18px
+        font-family: 'CenturyGothic', sans-serif
+
+      .address, .schedule
+        margin: 0 0 25px
+
+      .address, .mail, .schedule
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        .icon
+          width: 19px
+          margin: 0 16px 0 0
+    .contacts
+      flex-direction: column
+      align-items: flex-start
+      max-width: none
+      width: auto
+      span
+        font-size: 12px
+        letter-spacing: 0.3px
+        color: #fff
+        font-family: 'CenturyGothic', sans-serif
+      .btn-accent
+        margin: 18px 0 0 0
+
+
+.footer__bottom
+  background-color: #292929
+  padding: 25px 0 20px
+  font-size: 14px
+  .container
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    color: #fff
+    font-family: 'CenturyGothic', sans-serif
+
+    a
+      color: #ffffff
+      text-decoration: underline
+      font-size: 14px
+      font-family: 'CenturyGothic', sans-serif
+
+    .web-developer
+      font-size: 13px
+      display: flex
+      flex-direction: row
+      align-items: center
+
+      a
+        margin: 0 0 0 5px
+
+
+.modal-form
+  flex-direction: column
+  width: 340px
+
+  label
+    width: 100%
+    margin: 0 0 16px
+
+    input
+      color: #989898
+      font-size: 18px
+      border: 1px solid $border
+      background-color: transparent
+      padding: 0 26px
+
+      &::placeholder
+        color: #989898
+
+  button
+    margin: 10px auto 20px
+
+  .checkbox-wrapper
+    justify-content: flex-start
+    .label
+      color: #989898
+      a
+        color: #989898
+    //.checkbox-custom
+    //  border: 1px solid $border
+    //  box-sizing: border-box
+    //
+    //.checkbox-inp:checked + .checkbox-custom::before
+    //  top: 2px
+
+
+//modal
+.modal__div
+  position: fixed
+  width: 421px
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+
+  .modal__close
+    position: absolute
+    right: 10px
+    top: 10px
+    cursor: pointer
+
+  .modal__wrapper
+    background: #fff
+    width: 100%
+    overflow: auto
+    margin: 50px auto
+    padding: 55px 44px 33px
+    box-sizing: border-box
+    position: relative
+
+    h2
+      margin: 0 auto 20px
+      font-size: 24px
+      font-family: 'CenturyGothic-Bold', sans-serif
+      color: #000
+
+    p
+      font-size: 14px
+      color: #000
+      font-family: 'CenturyGothic', sans-serif
+
+  .modal-form
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin: 53px 0 0 0
+    padding: 0
+    label.checkbox-wrapper
+      input
+        width: auto
+        height: auto
+        margin: 0 10px 0 0
+      .label
+        font-size: 12px
+        font-family: 'CenturyGothic', sans-serif
+        a
+          display: inline
+          text-decoration: underline
+    label
+      width: 100%
+      height: 100%
+      margin: 0 0 12px
+
+      input
+        font-size: 18px
+        width: 100%
+        height: 58px
+        padding: 0 26px
+        box-sizing: border-box
+        color: #8e8e8e
+
+        &::placeholder
+          color: #8e8e8e
+
+    button
+      margin: 16px auto 12px
+      width: 100%
+      height: 71px
+      justify-content: space-between
+      padding: 0
+
+      .text
+        width: 100%
+        text-align: center
+
+      .icon
+        min-width: 75px
+
+#modal__callback
+  h2, p
+    text-align: center
+  h2
+    font-size: 18px
+  p
+    font-size: 16px
+
+#modal_thanks
+  .modal__wrapper
+    border: 10px solid $accent
+    justify-content: center
+    align-items: center
+    display: flex
+    flex-direction: column
+    height: 226px
+    padding: 25px
+    text-align: center
+    h3
+      text-align: center
+      margin: 0 0 18px
+      font-size: 18px
+      font-family: 'CenturyGothic-Bold', sans-serif
+      box-sizing: border-box
+
+.modal__auto
+  width: 1140px
+
+  .modal__wrapper
+    padding: 39px 22px 29px 25px
+
+    h2
+      text-transform: uppercase
+      font-size: 24px
+      font-family: "CenturyGothic-Bold", sans-serif
+      margin: 0 0 37px
+      text-align: left
+
+.auto__wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
+
+.modal__auto-image
+  width: 357px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.modal__auto-content
+  width: calc(100% - 357px)
+  padding: 0 0 0 44px
+  .text
+    text-align: left
+    color: #7c7c7c
+    font-size: 14px
+    font-family: 'CenturyGothic', sans-serif
+    p
+      color: #7c7c7c
+      margin: 0 0 20px
+      &:last-child
+        margin: 0
+  .modal-form
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin: 25px 0 0 0
+    label
+      width: 211px
+      margin: 0
+      input
+        height: 71px
+    button
+      width: 226px
+      margin: 0
+      .text
+        font-size: 18px
+        color: #fff
+
+.product__wrapper
+  h2
+    margin: 0 0 28px
+  .list-characteristics
+    font-size: 14px
+    color: #ae0011
+    line-height: 28px
+    margin: 0 0 28px
+    li
+      text-decoration: underline
+  .text
+    p
+      margin: 0
+
+.modal__product
+  .product__wrapper
+    h2
+      margin: 0 0 28px
+
+.overlay
+  z-index: 100
+  position: fixed
+  background-color: #000
+  opacity: 0.8
+  -moz-opacity: 0.8
+  filter: alpha(opacity=80)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+.politic-box
+  margin: 40px 0
+
+.title-document
+  font-weight: bold
+  text-align: center
+  margin: 0 auto 30px
+  font-size: 20px
+
+//productions
+.productions
+  .title
+    margin: 58px 0 64px
+    p
+      font-size: 26px
+      max-width: 1013px
+      width: 100%
+
+.productions__content
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  .container
+    align-items: flex-start
+    justify-content: space-between
+
+.productions__content-one
+  .text
+    min-height: 125px
+
+.productions__content-two
+  background-color: #ffffff
+  padding: 69px 0 24px
+  margin: 0 0 54px
+
+.productions__content-three
+  .productions__box
+    &:last-child
+      margin: 0 auto 49px
+
+
+.productions__box
+  width: 360px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 0 49px
+  .image
+    width: 100%
+    height: 214px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+  h3
+    text-align: center
+    text-transform: uppercase
+    font-size: 24px
+    font-family: 'CenturyGothic-Bold', sans-serif
+    margin: 0 auto 25px
+  .text
+    padding: 12px 10px 17px
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: 12px
+  h4
+    font-size: 13px
+    text-transform: uppercase
+    font-family: 'CenturyGothic-Bold', sans-serif
+  ul
+    margin: 10px 0 14px
+    &:last-child
+      margin: 0
+  p
+    margin: 10px 0 0
+  .button-group
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+      width: 50%
+      font-size: 18px
+    .text
+      font-size: 18px
+      padding: 0
+
+.productions__box-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2)
+  background: #fff
+  padding: 0 0 1px
+
+.btn-close
+  display: none
+  cursor: pointer
+
+.btn-burger
+  cursor: pointer
+  display: none
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 23px
+  span
+    display: block
+    width: 100%
+    height: 3px
+    margin: 0 0 6px
+    background-color: #f7ad1b
+    &:last-child
+      margin: 0
+
+@import "media"
+// Всегда в конце
