@@ -39,6 +39,15 @@ $(document).ready(function() {
         return false;
     });
 
+    // input text
+    $('[name="name"]').on('keypress', function() {
+        var that = this;
+        setTimeout(function() {
+            var res = /[^а-яА-ЯїЇєЄіІёЁ ]/g.exec(that.value);
+            that.value = that.value.replace(res, '');
+        }, 0);
+    });
+
 
     // modal image
     $('[data-fancybox="images"]').fancybox();
@@ -53,6 +62,17 @@ $(document).ready(function() {
 
     $('.btn-close').click(function () {
         $('.top-menu').removeClass('open');
+    });
+
+    // animate scroll
+    $('.go_to').click(function () {
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_el).offset().top
+            }, 500);
+        }
+        return false;
     });
 
 });
