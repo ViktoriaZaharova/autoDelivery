@@ -113,3 +113,13 @@ $(document).ready(function () {
     });
 });
 //end
+
+$(document).ready(function () {
+   setTimeout(function () {
+      $('.overlay').fadeIn();
+      $('#modal_sale').css('display', 'flex').animate({
+          opacity: 1,
+          top: '50%'
+      });
+   }, 5000);
+});

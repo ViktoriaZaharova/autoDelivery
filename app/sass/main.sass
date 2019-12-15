@@ -356,6 +356,23 @@ header
   margin: 155px auto 108px
   text-transform: uppercase
 
+.slider-sale
+  margin: 0 auto 39px
+  font-size: 40px
+  text-align: center
+  text-transform: uppercase
+  color: #fff
+  font-weight: bold
+  &:first-child
+    margin-top: 155px
+  &:nth-child(3)
+    margin: 0
+  strong
+    font-size: 72px
+    color: #ff6a00
+    line-height: 49px
+
+
 .main__slider-box
   position: relative
   max-height: 1150px
@@ -1125,12 +1142,7 @@ footer
       color: #989898
       a
         color: #989898
-    //.checkbox-custom
-    //  border: 1px solid $border
-    //  box-sizing: border-box
-    //
-    //.checkbox-inp:checked + .checkbox-custom::before
-    //  top: 2px
+
 
 
 //modal
@@ -1249,6 +1261,79 @@ footer
       font-family: 'CenturyGothic-Bold', sans-serif
       box-sizing: border-box
 
+#modal_sale
+  width: 751px
+  height: 446px
+  object-fit: contain
+  border: solid 10px #ffffff
+  background: #ffffff
+  overflow: visible
+  .modal__wrapper
+    height: 100%
+    margin: 0
+    background: url("../img/bg-modal.png") no-repeat center #000
+      size: cover
+    padding: 102px 57px 30px
+    color: #fff
+    overflow: visible
+    .modal__close
+      top: -28px
+      right: -34px
+  h3
+    font-size: 72px
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 59px
+    margin: 0 0 16px
+  p
+    color: #fff
+    font-weight: bold
+    font-family: $default-font
+    font-size: 48px
+    line-height: 56px
+    text-transform: uppercase
+    strong
+      color: #ff6501
+      font-size: 72px
+
+  .box-orders
+    position: absolute
+    right: 45px
+    top: -29px
+    color: #fff
+    z-index: 2
+    width: 210px
+    height: 259px
+    object-fit: contain
+    background: url("../img/bg-box.png") no-repeat center
+      size: contain
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 0
+      width: 45px
+      height: 19px
+    &:before
+      border-bottom: 17px solid #dd0c11
+      border-left: 45px solid transparent
+      left: -42px
+    &:after
+      border-bottom: 17px solid #dd0c11
+      border-right: 45px solid transparent
+      right: -42px
+    p
+      line-height: 21px
+      font-size: 24px
+      margin: 113px auto 6px
+      text-align: center
+    h6
+      font-size: 46px
+      font-weight: bold
+      line-height: 41px
+      text-align: center
+      text-transform: uppercase
+      margin: 0 auto
+
 
 .modal__auto
   width: 1140px
@@ -1281,7 +1366,7 @@ footer
 
 .modal__auto-content
   width: calc(100% - 357px)
-  padding: 0 0 0 44px
+  padding: 0 0 0 38px
   .text
     text-align: left
     color: #7c7c7c
@@ -1381,7 +1466,7 @@ footer
 
 .productions__content-one
   .text
-    min-height: 125px
+    min-height: 80px
 
 .productions__content-two
   background-color: #ffffff

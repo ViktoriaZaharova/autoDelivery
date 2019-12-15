@@ -201,6 +201,18 @@
     font-size: 40px
     margin: 90px auto 20px
 
+  .slider-sale
+    margin: 0 auto 20px
+    font-size: 26px
+    &:first-child
+      margin: 90px auto 20px
+    strong
+      font-size: 40px
+      line-height: 40px
+
+  .main__slider-box .container .btn-accent
+    margin: 50px auto 0
+
   .main__slider-box .container h3
     font-size: 30px
 
@@ -247,7 +259,7 @@
     .img-slide
       height: 100%
       max-width: none
-      width: auto
+      width: 100%
     p
       font-size: 18px
 
@@ -318,6 +330,15 @@
     font-size: 30px
     margin: 73px auto 14px
 
+  .slider-sale
+    margin: 0 auto 14px
+    font-size: 20px
+    &:first-child
+      margin: 73px auto 14px
+    strong
+      font-size: 24px
+      line-height: 24px
+
   .main__slider-box .container
     top: 50%
     transform: translate(0,-50%)
@@ -370,6 +391,39 @@
 
   .about:before
     top: -30px
+
+  #modal_sale
+    width: 95%
+    height: auto
+    h3
+      font-size: 40px
+      line-height: 35px
+    p
+      font-size: 30px
+      line-height: 28px
+      strong
+        font-size: 40px
+    .modal__wrapper
+      padding: 102px 37px 80px
+      .modal__close
+        right: 10px
+        top: 10px
+    .box-orders
+      width: 175px
+      height: 210px
+      &:before
+        left: -40px
+        border-bottom: 18px solid #dd0c11
+      &:after
+        border-bottom: 18px solid #dd0c11
+        right: -40px
+      p
+        font-size: 20px
+        line-height: 20px
+        margin: 90px auto 6px
+      h6
+        font-size: 30px
+        line-height: 26px
 
 @media only screen and (max-width : 768px)
   .contacts
@@ -644,6 +698,12 @@
 
   .about:before
     top: -32px
+
+  #modal_sale .box-orders
+    display: none
+
+  #modal_sale .modal__wrapper
+    padding: 40px 20px
 
 @media only screen and (max-width : 480px)
   .main__slider-box .container .btn-accent
