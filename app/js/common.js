@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.main__slider').slick({
         dots: true,
         prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -13,7 +13,6 @@ $(document).ready(function() {
             }
         ]
     });
-
 
 
     // mask phone
@@ -40,9 +39,9 @@ $(document).ready(function() {
     });
 
     // input text
-    $('[name="name"]').on('keypress', function() {
+    $('[name="name"]').on('keypress', function () {
         var that = this;
-        setTimeout(function() {
+        setTimeout(function () {
             var res = /[^а-яА-ЯїЇєЄіІёЁ ]/g.exec(that.value);
             that.value = that.value.replace(res, '');
         }, 0);
@@ -112,14 +111,25 @@ $(document).ready(function () {
             );
     });
 });
+
+$(document).ready(function () {
+    $('#modal_sale').click(function () {
+        $(this).css('display', 'none');
+        $('#modal__order').css('display', 'flex')
+            .animate({
+                opacity: 1,
+                top: '50%'
+            }, 200);
+    });
+});
 //end
 
 $(document).ready(function () {
-   setTimeout(function () {
-      $('.overlay').fadeIn();
-      $('#modal_sale').css('display', 'flex').animate({
-          opacity: 1,
-          top: '50%'
-      });
-   }, 5000);
+    setTimeout(function () {
+        $('.overlay').fadeIn();
+        $('#modal_sale').css('display', 'flex').animate({
+            opacity: 1,
+            top: '50%'
+        });
+    }, 5000);
 });
